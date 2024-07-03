@@ -1,0 +1,27 @@
+.my-swiper {
+   padding-top: 70px;
+   padding-left: 30px;
+   margin-bottom: 10rem;
+}
+.swiper-slide {
+   margin-bottom: 3rem;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 4rem;
+}
+@media (max-width:767px) {
+   .my-swipper {
+         padding-left: 0px;
+      }
+      .swiper-slide {
+         flex-direction: column;
+      }
+}
+
+
+.swiper-pagination-bullet {
+   background: red !important;
+}
+
