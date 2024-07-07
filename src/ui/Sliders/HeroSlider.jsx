@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import "../../swiperConfig";
 
 import "../../styles/hero-slider.css";
-import Button from "../Button";
+import Button from "../common/Button";
 
 const HeroSlider = () => {
   const heroProducts = productsData.filter(
@@ -59,9 +59,11 @@ const HeroSlider = () => {
                   <del className="text-text-muted">$ {originalPrice}</del>
                 </small>
               </h2>
-              <Button type="link">Shop now</Button>
+              <Button type="link" to={`products/${id}`} customClass="m-auto">
+                Shop now
+              </Button>
             </div>
-            <figure className="">
+            <figure>
               <img
                 src={heroImage}
                 alt={`img of ${title}`}

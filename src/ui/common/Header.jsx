@@ -7,12 +7,21 @@ import {
 import { useState, useRef, useEffect } from "react";
 import ModelUser from "./Model";
 import Tooltip from "./Tooltip";
+import { IoIosArrowDropupCircle } from "react-icons/io";
+
+function goToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // This makes the scrolling smooth
+  });
+}
 
 function Header() {
   const [showModel, setShowModel] = useState(false);
   const [showSearchTooltip, setShowSearchTooltip] = useState(false);
   const [showCartTooltip, setShowCartTooltip] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [toBottom, setToBottom] = useState(false);
   const hideTimeout = useRef(null);
 
   const handleMouseEnter = () => {
@@ -35,6 +44,22 @@ function Header() {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > window.innerHeight) {
+        setToBottom(true);
+      } else {
+        setToBottom(false);
       }
     };
 
@@ -94,6 +119,15 @@ function Header() {
           </li>
         </ul>
       </div>
+
+      {toBottom && (
+        <div
+          className="fixed bottom-5 right-4 bg-main text-white w-10 h-10 flex justify-center items-center  font-bold text-3xl rounded cursor-pointer hover:bg-main-2"
+          onClick={() => goToTop()}
+        >
+          <IoIosArrowDropupCircle />
+        </div>
+      )}
     </header>
   );
 }

@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 function Choice({ children, onClick, category }) {
   const clicked = category === children;
   return (

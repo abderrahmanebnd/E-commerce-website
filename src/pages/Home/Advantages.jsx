@@ -8,7 +8,7 @@ import Advantage from "./Advantage";
 
 function Advantages() {
   return (
-    <section className="container m-auto">
+    <section className="container m-auto mb-10">
       <h2 className="text-center text-2xl text-text font-bold tracking-wide mt-24 mb-10">
         Our Advantages
       </h2>

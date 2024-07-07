@@ -16,7 +16,7 @@
          padding-left: 0px;
       }
       .swiper-slide {
-         flex-direction: column;
+         flex-direction:column-reverse;
       }
 }
 

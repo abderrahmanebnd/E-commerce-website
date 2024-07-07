@@ -1,6 +1,6 @@
 import { IoMdStar } from "react-icons/io";
-import productsData from "../../public/data/productsData";
-import Button from "./Button";
+import productsData from "../../../public/data/productsData";
+import Button from "../../ui/common/Button";
 import { NavLink } from "react-router-dom";
 
 function Products({ category }) {
