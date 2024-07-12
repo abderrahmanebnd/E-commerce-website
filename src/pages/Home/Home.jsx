@@ -1,8 +1,8 @@
-import Advantages from "../../ui/Advantages";
+import Advantages from "../Home/Advantages";
 import FeaturedSlider from "../../ui/Sliders/FeaturedSlider";
 import HeroSlider from "../../ui/Sliders/HeroSlider";
-import TopProducts from "../../ui/TopProducts";
-import Footer from "../../ui/Footer";
+import TopProducts from "../Home/TopProducts";
+import Footer from "../../ui/common/Footer";
 function Home() {
   return (
     <main className="bg-bgColor pb-5 ">

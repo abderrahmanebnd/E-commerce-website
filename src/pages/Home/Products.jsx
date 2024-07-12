@@ -3,12 +3,20 @@ import productsData from "../../../public/data/productsData";
 import Button from "../../ui/common/Button";
 import { NavLink } from "react-router-dom";
 
+import { useDispatch } from "react-redux";
+import { addItem } from "../cart/cartSlice";
+
 function Products({ category }) {
   const productsList =
     category === "All"
       ? productsData.slice(0, 12)
       : productsData.filter((item) => item.category === category);
 
+  const dispatch = useDispatch();
+
+  function addToCart(id) {
+    dispatch(addItem(id));
+  }
   return (
     <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  px-4 sm:px-2 gap-3 mb-4 container m-auto min-h-[480px]">
       {productsList.map((item, index) => (
@@ -41,7 +49,12 @@ function Products({ category }) {
                 <del className="">$ {item.originalPrice}</del>
               </small>
             </h2>
-            <Button customClass="w-full text-center ">Add to cart</Button>
+            <Button
+              customClass="w-full text-center"
+              onClick={() => addToCart(item.id)}
+            >
+              Add to cart
+            </Button>
           </div>
         </li>
       ))}

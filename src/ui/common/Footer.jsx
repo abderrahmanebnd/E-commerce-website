@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import Button from "./common/Button";
-import { footMenu } from "../../public/data/footerData";
+import Button from "./Button";
+import { footMenu } from "../../../public/data/footerData";
 
 function Footer() {
   return (

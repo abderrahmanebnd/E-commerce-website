@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import Pictures from "./Pictures";
 import Details from "./Details";
-import Advantages from "../../ui/Advantages";
-import Footer from "../../ui/Footer";
+import Footer from "../../ui/common/Footer";
+import Advantages from "../Home/Advantages";
 import Filter from "./Filter";
 import { useState } from "react";
 import Specifications from "./Specifications";

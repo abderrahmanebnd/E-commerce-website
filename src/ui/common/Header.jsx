@@ -4,15 +4,17 @@ import {
   AiOutlineShoppingCart,
   AiOutlineUser,
 } from "react-icons/ai";
+import { IoIosArrowDropupCircle } from "react-icons/io";
 import { useState, useRef, useEffect } from "react";
+
 import ModelUser from "./Model";
 import Tooltip from "./Tooltip";
-import { IoIosArrowDropupCircle } from "react-icons/io";
 
+import { useSelector } from "react-redux";
 function goToTop() {
   window.scrollTo({
     top: 0,
-    behavior: "smooth", // This makes the scrolling smooth
+    behavior: "smooth",
   });
 }
 
@@ -20,10 +22,13 @@ function Header() {
   const [showModel, setShowModel] = useState(false);
   const [showSearchTooltip, setShowSearchTooltip] = useState(false);
   const [showCartTooltip, setShowCartTooltip] = useState(false);
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [toBottom, setToBottom] = useState(false);
+
   const hideTimeout = useRef(null);
 
+  const cartItemsNumber = useSelector((store) => store.cart.cartItems.length);
   const handleMouseEnter = () => {
     if (hideTimeout.current) {
       clearTimeout(hideTimeout.current);
@@ -96,6 +101,11 @@ function Header() {
             onMouseEnter={() => setShowCartTooltip(true)}
             onMouseLeave={() => setShowCartTooltip(false)}
           >
+            {cartItemsNumber > 0 && (
+              <span className="bg-main text-white font-bold text-sm p-1  rounded-full h-5 w-5 flex justify-center items-center absolute -right-5 -top-2 ">
+                {cartItemsNumber}
+              </span>
+            )}
             <NavLink to="cart">
               <AiOutlineShoppingCart />
             </NavLink>

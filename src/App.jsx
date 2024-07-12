@@ -2,8 +2,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Products from "./pages/all-products/Products";
 import ProductPage from "./pages/Product/ProductPage";
 import Cart from "./pages/cart/Cart";
-import Error from "./ui/Error";
-import Home from "./ui/Home";
+import Error from "./pages/Error";
+import Home from "./pages/Home/Home";
 import AppLayout from "./ui/AppLayout";
 
 const router = createBrowserRouter([
@@ -19,14 +19,13 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <Products />,
-        // loader: menuLoader,
         errorElement: <Error />,
       },
       { path: "/cart", element: <Cart /> },
       {
         path: "/products/:id",
         element: <ProductPage />,
-        // action: createOrderAction,
+        errorElement: <Error />,
       },
     ],
   },

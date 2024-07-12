@@ -3,9 +3,13 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { register } from "swiper/element/bundle";
+import { Provider } from "react-redux";
+import { store } from "./pages/cart/cartStore.js";
 register();
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );

@@ -6,7 +6,7 @@ function Choices({ onClick, category }) {
     <ul className="flex justify-center flex-wrap px-4 gap-x-4 gap-y-2 mb-10  ">
       {choices.map((item, index) => {
         return (
-          <Choice category={category} onClick={onClick}>
+          <Choice category={category} onClick={onClick} key={index}>
             {item}
           </Choice>
         );

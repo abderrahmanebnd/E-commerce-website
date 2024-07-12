@@ -1,6 +1,6 @@
 import { IoMdStar } from "react-icons/io";
 import productsData from "../../../public/data/productsData";
-import Button from "../../ui/Button";
+import Button from "../../ui/common/Button";
 
 function Details({ id }) {
   const product = productsData[id - 1];

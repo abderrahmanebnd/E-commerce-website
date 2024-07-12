@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Choices from "./common/Choices";
+import Choices from "../../ui/common/Choices";
 import Products from "./Products";
 
 function TopProducts() {
