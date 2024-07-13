@@ -4,7 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import { register } from "swiper/element/bundle";
 import { Provider } from "react-redux";
-import { store } from "./pages/cart/cartStore.js";
+import { store } from "./store.js";
 register();
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

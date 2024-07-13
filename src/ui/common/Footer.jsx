@@ -16,6 +16,7 @@ function Footer() {
           </p>
           <input
             placeholder="Email Address*"
+            type="email"
             className="bg-transparent p-2 border-2 border-thumb rounded text-track placeholder:text-thumb w-full mb-4"
           />
           <Button>Subscribe</Button>
