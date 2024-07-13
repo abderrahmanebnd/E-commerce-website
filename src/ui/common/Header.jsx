@@ -11,6 +11,7 @@ import ModelUser from "./Model";
 import Tooltip from "./Tooltip";
 
 import { useSelector } from "react-redux";
+import SearchBar from "./SearchBar";
 function goToTop() {
   window.scrollTo({
     top: 0,
@@ -22,13 +23,12 @@ function Header() {
   const [showModel, setShowModel] = useState(false);
   const [showSearchTooltip, setShowSearchTooltip] = useState(false);
   const [showCartTooltip, setShowCartTooltip] = useState(false);
-
+  const [showSearchBar, setShowSearchBar] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [toBottom, setToBottom] = useState(false);
-
   const hideTimeout = useRef(null);
-
   const cartItemsNumber = useSelector((store) => store.cart.cartItems.length);
+
   const handleMouseEnter = () => {
     if (hideTimeout.current) {
       clearTimeout(hideTimeout.current);
@@ -75,6 +75,10 @@ function Header() {
     };
   }, []);
 
+  const handleCloseSearchBar = () => {
+    setShowSearchBar(false);
+  };
+
   return (
     <header
       className={`min-h-10 fixed z-10 w-full transition-colors duration-300 ${
@@ -92,6 +96,7 @@ function Header() {
             className="cursor-pointer text-2xl sm:text-3xl relative"
             onMouseEnter={() => setShowSearchTooltip(true)}
             onMouseLeave={() => setShowSearchTooltip(false)}
+            onClick={() => setShowSearchBar(true)}
           >
             <AiOutlineSearch />
             {showSearchTooltip && <Tooltip text="Search" />}
@@ -102,7 +107,7 @@ function Header() {
             onMouseLeave={() => setShowCartTooltip(false)}
           >
             {cartItemsNumber > 0 && (
-              <span className="bg-main text-white font-bold text-sm p-1  rounded-full h-5 w-5 flex justify-center items-center absolute -right-5 -top-2 ">
+              <span className="bg-main text-white font-bold text-sm p-1 rounded-full h-5 w-5 flex justify-center items-center absolute -right-5 -top-2">
                 {cartItemsNumber}
               </span>
             )}
@@ -130,10 +135,12 @@ function Header() {
         </ul>
       </div>
 
+      {showSearchBar && <SearchBar onClose={handleCloseSearchBar} />}
+
       {toBottom && (
         <div
-          className="fixed bottom-5 right-4 bg-main text-white w-10 h-10 flex justify-center items-center  font-bold text-3xl rounded cursor-pointer hover:bg-main-2"
-          onClick={() => goToTop()}
+          className="fixed bottom-5 right-4 bg-main text-white w-10 h-10 flex justify-center items-center font-bold text-3xl rounded cursor-pointer hover:bg-main-2"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <IoIosArrowDropupCircle />
         </div>

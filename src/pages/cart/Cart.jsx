@@ -15,11 +15,11 @@ function Cart() {
   const cartItemsNum = cartItemsIds.length;
 
   const originalPr = products.reduce((prev, curr) => {
-    return prev + curr.originalPrice;
+    return prev + curr?.originalPrice;
   }, 0);
 
   const discount = products.reduce((prev, curr) => {
-    return prev + (curr.originalPrice - curr.finalPrice);
+    return prev + (curr?.originalPrice - curr?.finalPrice);
   }, 0);
 
   return (

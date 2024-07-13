@@ -5,9 +5,6 @@ export default {
   theme: {
     extend: {
       colors: {
-        black: {
-          DEFAULT: "var(--black-color)",
-        },
         bgColor: {
           DEFAULT: "var(--bg-color)",
           2: "var(--bg-color-2)",
