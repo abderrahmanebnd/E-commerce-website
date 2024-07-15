@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import productsData from "../../../public/data/productsData";
 
 function Pictures({ id }) {
   const images = productsData[id - 1].images;
   const [selectedPic, setSelectedPic] = useState(images[0]);
+  useEffect(
+    function () {
+      setSelectedPic(images[0]);
+    },
+    [images]
+  );
   return (
     <section className="flex flex-col-reverse  gap-1 sm:flex-row flex-grow ">
       <ul className="flex sm:flex-col gap-6 ">
