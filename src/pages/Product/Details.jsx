@@ -2,7 +2,7 @@ import { IoMdStar } from "react-icons/io";
 import productsData from "../../../public/data/productsData";
 import Button from "../../ui/common/Button";
 import { useDispatch } from "react-redux";
-import { addItem } from "../cart/cartSlice";
+import { addToCart } from "../../helpers";
 
 function Details({ id }) {
   const product = productsData[id - 1];
@@ -11,9 +11,6 @@ function Details({ id }) {
     100;
 
   const dispatch = useDispatch();
-  function addToCart(id) {
-    dispatch(addItem(id));
-  }
   return (
     <ul className="flex-grow ">
       <li className="pb-7 border-b border-thumb">
@@ -61,7 +58,10 @@ function Details({ id }) {
           </span>
         </div>
       </li>
-      <Button customClass="w-52" onClick={() => addToCart(product.id)}>
+      <Button
+        customClass="w-52"
+        onClick={() => addToCart(dispatch, product.id)}
+      >
         Add to cart
       </Button>
     </ul>

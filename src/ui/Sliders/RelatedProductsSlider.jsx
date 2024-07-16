@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import "../../swiperConfig";
 
 import Button from "../common/Button";
+import ProductCard from "../common/ProductCard";
 
 function RelatedProducts() {
   const id = useParams().id;
@@ -53,35 +54,7 @@ function RelatedProducts() {
       >
         {relatedProducts.map((item) => (
           <swiper-slide key={item.id} class="swiper-slide">
-            <li className="border-2 rounded border-thumb pb-4 shadow-xl shadow-gray-900">
-              <figure className="bg-bgColor-2 mb-3 py-4">
-                <img
-                  src={item.images[0]}
-                  alt={item.title}
-                  className="w-2/3 mx-auto"
-                />
-              </figure>
-              <div className="px-5">
-                <span className="flex text-main mb-2">
-                  {Array.from({ length: item.rateCount }, (_, i) => (
-                    <IoMdStar key={i} />
-                  ))}
-                </span>
-
-                <h1 className="text-text font-bold text-lg">{item.title}</h1>
-                <span className="text-text mb-3 inline-block text-sm">
-                  {item.info}
-                </span>
-                <hr className="border-text-muted border" />
-                <h2 className="text-xl font-bold text-text my-3">
-                  $ {item.finalPrice} &nbsp;
-                  <small className="text-text-muted">
-                    <del>$ {item.originalPrice}</del>
-                  </small>
-                </h2>
-                <Button customClass="w-full text-center">Add to cart</Button>
-              </div>
-            </li>
+            <ProductCard item={item} />
           </swiper-slide>
         ))}
       </swiper-container>

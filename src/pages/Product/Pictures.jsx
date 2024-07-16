@@ -15,13 +15,17 @@ function Pictures({ id }) {
       <ul className="flex sm:flex-col gap-6 ">
         {images.map((item, index) => {
           return (
-            <li key={index} onClick={() => setSelectedPic(item)}>
+            <li
+              key={index}
+              onClick={() => setSelectedPic(item)}
+              className="w-full"
+            >
               <figure
                 className={`rounded border-2 ${
                   selectedPic === item ? "text-text" : "border-thumb"
                 } p-1 cursor-pointer`}
               >
-                <img src={item} alt="Product" className="w-full sm:w-16 " />
+                <img src={item} alt="Product" className="sm:w-16 w-full " />
               </figure>
             </li>
           );

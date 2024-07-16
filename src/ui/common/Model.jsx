@@ -4,7 +4,7 @@ function ModelUser() {
       <div className="border-b pb-5 border-gray-500">
         <h2 className="font-semibold text-xl mb-1">Hello!</h2>
         <p className="mb-2">Access account and manage orders</p>
-        <button className="border border-text py-2 px-3 border-text-muted hover:border-text">
+        <button className="border  py-2 px-3 border-text-muted hover:border-text">
           Login / Sign up
         </button>
       </div>

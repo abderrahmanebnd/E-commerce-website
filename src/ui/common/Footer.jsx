@@ -1,8 +1,22 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import { toast } from "react-hot-toast";
 import Button from "./Button";
 import { footMenu } from "../../../public/data/footerData";
 
 function Footer() {
+  const [email, setEmail] = useState("");
+
+  const handleSubscribe = (e) => {
+    e.preventDefault(); // Prevent page reload
+    if (email) {
+      toast.success("Successfully subscribed!");
+      setEmail("");
+    } else {
+      toast.error("Please enter a valid email address");
+    }
+  };
+
   return (
     <footer className="bg-black pt-10 ">
       <ul className="container m-auto grid gap-7 sm:grid-cols-2 lg:grid-cols-4 px-3 mb-5">
@@ -14,12 +28,16 @@ function Footer() {
             Subscribe to our Email alerts to receive early discount offers, and
             new products info.
           </p>
-          <input
-            placeholder="Email Address*"
-            type="email"
-            className="bg-transparent p-2 border-2 border-thumb rounded text-track placeholder:text-thumb w-full mb-4"
-          />
-          <Button>Subscribe</Button>
+          <form onSubmit={handleSubscribe}>
+            <input
+              placeholder="Email Address*"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="bg-transparent p-2 border-2 border-thumb rounded text-text placeholder:text-thumb w-full mb-4"
+            />
+            <Button>Subscribe</Button>
+          </form>
         </li>
 
         {footMenu.map((item) => {

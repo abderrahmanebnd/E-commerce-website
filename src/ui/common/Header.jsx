@@ -12,12 +12,6 @@ import Tooltip from "./Tooltip";
 
 import { useSelector } from "react-redux";
 import SearchBar from "./SearchBar";
-function goToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-}
 
 function Header() {
   const [showModel, setShowModel] = useState(false);

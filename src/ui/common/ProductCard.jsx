@@ -3,12 +3,11 @@ import Button from "./Button";
 import { useDispatch } from "react-redux";
 import { addItem } from "../../pages/cart/cartSlice";
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
+import { addToCart } from "../../helpers";
 
 function ProductCard({ item }) {
   const dispatch = useDispatch();
-  function addToCart(id) {
-    dispatch(addItem(id));
-  }
 
   return (
     <li
@@ -43,7 +42,7 @@ function ProductCard({ item }) {
         </h2>
         <Button
           customClass="w-full text-center "
-          onClick={() => addToCart(item.id)}
+          onClick={() => addToCart(dispatch, item.id)}
         >
           Add to cart
         </Button>
