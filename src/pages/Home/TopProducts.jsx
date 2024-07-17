@@ -17,7 +17,7 @@ function TopProducts() {
       </h2>
       <Choices category={category} onClick={setCategorie} />
       <Products productsList={productsList} />
-      <li className="container m-auto border-2 border-text-muted flex justify-center items-center rounded px-3 py-5 my-5 ">
+      <div className="container m-auto border-2 border-text-muted flex justify-center items-center rounded px-3 py-5 my-5 ">
         <NavLink
           to="products"
           className="text-text hover:text-white transition-colors duration-200 text-xl"
@@ -25,7 +25,7 @@ function TopProducts() {
           Browse All <br />
           Product ➡
         </NavLink>
-      </li>
+      </div>
     </section>
   );
 }

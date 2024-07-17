@@ -92,7 +92,7 @@ function Header() {
             onMouseLeave={() => setShowSearchTooltip(false)}
             onClick={() => setShowSearchBar(true)}
           >
-            <AiOutlineSearch />
+            <AiOutlineSearch aria-label="Search" />
             {showSearchTooltip && <Tooltip text="Search" />}
           </li>
           <li
@@ -105,7 +105,7 @@ function Header() {
                 {cartItemsNumber}
               </span>
             )}
-            <NavLink to="cart">
+            <NavLink to="/cart" aria-label="Cart">
               <AiOutlineShoppingCart />
             </NavLink>
             {showCartTooltip && <Tooltip text="Cart" />}
@@ -115,7 +115,7 @@ function Header() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <AiOutlineUser className="text-2xl sm:text-3xl" />
+            <AiOutlineUser className="text-2xl sm:text-3xl" aria-label="User" />
             {showModel && (
               <div
                 className="absolute top-[200%] right-0"
@@ -135,6 +135,7 @@ function Header() {
         <div
           className="fixed bottom-5 right-4 bg-main text-white w-10 h-10 flex justify-center items-center font-bold text-3xl rounded cursor-pointer hover:bg-main-2"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          aria-label="Scroll to Top"
         >
           <IoIosArrowDropupCircle />
         </div>
