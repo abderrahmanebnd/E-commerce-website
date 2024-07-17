@@ -15,6 +15,8 @@ function CartItem({ product }) {
           src={product.images[0]}
           alt={`${product.title}`}
           className="w-28 sm:w-36"
+          width="600"
+          height="400"
         />
       </figure>
       <div className="flex-grow">

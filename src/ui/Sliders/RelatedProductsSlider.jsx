@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { IoMdStar } from "react-icons/io";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import productsData from "../../../public/data/productsData";
@@ -8,7 +7,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "../../swiperConfig";
 
-import Button from "../common/Button";
 import ProductCard from "../common/ProductCard";
 
 function RelatedProducts() {

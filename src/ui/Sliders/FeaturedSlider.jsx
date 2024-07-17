@@ -50,7 +50,13 @@ const FeaturedSlider = () => {
             <swiper-slide key={id} class="featured-swiper-slide">
               <h1 className="text-text mb-3">{title}</h1>
               <Link to="cart">
-                <img src={featuredImage} alt="2" className="w-48 m-auto" />
+                <img
+                  src={featuredImage}
+                  alt="2"
+                  className="w-48 m-auto"
+                  width="600"
+                  height="400"
+                />
               </Link>
               <h2 className="text-text font-semibold text-xl mt-3">
                 $ {finalPrice} &nbsp;

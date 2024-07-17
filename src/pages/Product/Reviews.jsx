@@ -12,6 +12,8 @@ function Reviews() {
                 src="https://www.pngitem.com/pimgs/m/150-1503945_transparent-user-png-default-user-image-png-png.png"
                 alt="user-img"
                 className="w-12 h-12 object-cover rounded-full"
+                width="600"
+                height="400"
               />
               <div>
                 <h2 className="text-text font-bold mb-1">{item.name}</h2>

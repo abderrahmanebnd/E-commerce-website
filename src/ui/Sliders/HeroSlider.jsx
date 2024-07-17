@@ -43,19 +43,22 @@ const HeroSlider = () => {
 
         return (
           <swiper-slide key={id} class="swiper-slide">
+            <h2 className="text-bgColor-3 text-[11rem] font-bold absolute -z-10 text-nowrap top-1/2 left-10 -translate-y-1/2 hidden md:block">
+              {type}
+            </h2>
             <div className="text-center sm:text-left">
-              <h2 className="text-text font-semibold sm:text-2xl text-lg mb-3">
+              <h3 className="text-text font-semibold sm:text-2xl text-lg mb-3">
                 {title}
-              </h2>
-              <h3 className="capitalize text-text font-bold sm:text-4xl mb-2 tracking-wide sm:mb-6 text-2xl">
-                {tagline}
               </h3>
-              <h4 className="text-text font-semibold sm:text-2xl text-xl sm:mb-10 mb-5">
+              <h4 className="capitalize text-text font-bold sm:text-4xl mb-2 tracking-wide sm:mb-6 text-2xl">
+                {tagline}
+              </h4>
+              <h2 className="text-text font-semibold sm:text-2xl text-xl sm:mb-10 mb-5">
                 $ {finalPrice} &nbsp;
                 <small>
                   <del className="text-text-muted">$ {originalPrice}</del>
                 </small>
-              </h4>
+              </h2>
               <Button type="link" to={`products/${id}`} customClass="m-auto">
                 Shop now
               </Button>
@@ -65,10 +68,9 @@ const HeroSlider = () => {
                 src={heroImage}
                 alt={`img of ${title}`}
                 className="w-[27rem]"
+                width="600"
+                height="400"
               />
-              <figcaption className="text-bgColor-3 text-[11rem] font-bold absolute -z-10 text-nowrap top-1/2 left-10 -translate-y-1/2 hidden md:block">
-                {type}
-              </figcaption>
             </figure>
           </swiper-slide>
         );

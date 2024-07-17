@@ -25,7 +25,13 @@ function Pictures({ id }) {
                   selectedPic === item ? "text-text" : "border-thumb"
                 } p-1 cursor-pointer`}
               >
-                <img src={item} alt="Product" className="sm:w-16 w-full " />
+                <img
+                  src={item}
+                  alt="Product"
+                  className="sm:w-16 w-full "
+                  width="600"
+                  height="400"
+                />
               </figure>
             </li>
           );
@@ -37,6 +43,8 @@ function Pictures({ id }) {
           src={selectedPic}
           alt="Hero-Pic"
           className="w-auto m-auto sm:w-80 md:w-96"
+          width="600"
+          height="400"
         />
       </figure>
     </section>

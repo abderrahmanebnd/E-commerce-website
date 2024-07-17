@@ -20,6 +20,8 @@ function ProductCard({ item }) {
             src={item.images[0]}
             alt={item.title}
             className="w-2/3 mx-auto hover:scale-110 transition-transform duration-500"
+            width="600"
+            height="400"
           />
         </Link>
       </figure>
