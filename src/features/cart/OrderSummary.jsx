@@ -25,7 +25,7 @@ function OrderSummary({ originalPr, discount }) {
       </p>
       <h2 className="text-text font-bold flex items-center justify-between my-8 ">
         <span className="text-xl">Total Price</span>
-        <span className="text-2xl">${originalPr - discount}</span>
+        <span className="text-2xl">${(originalPr - discount).toFixed(2)}</span>
       </h2>
       <Button customClass={"w-full"}>Checkout</Button>
     </div>

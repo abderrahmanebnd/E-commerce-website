@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux";
-import Footer from "../../ui/common/Footer";
-import CartItems from "./CartItems";
-import OrderSummary from "./OrderSummary";
-import EmptyCart from "./EmptyCart";
-import productsData from "../../../public/data/productsData";
+import Footer from "../ui/common/Footer";
+import CartItems from "../features/cart/CartItems";
+import OrderSummary from "../features/cart/OrderSummary";
+import EmptyCart from "../features/cart/EmptyCart";
+import productsData from "../../public/data/productsData";
 
 function Cart() {
   const cartItemsIds = useSelector((store) => store.cart.cartItems);
@@ -14,13 +14,17 @@ function Cart() {
 
   const cartItemsNum = cartItemsIds.length;
 
-  const originalPr = products.reduce((prev, curr) => {
-    return prev + curr?.originalPrice;
-  }, 0);
+  const originalPr = products
+    .reduce((prev, curr) => {
+      return prev + curr?.originalPrice;
+    }, 0)
+    .toFixed(2);
 
-  const discount = products.reduce((prev, curr) => {
-    return prev + (curr?.originalPrice - curr?.finalPrice);
-  }, 0);
+  const discount = products
+    .reduce((prev, curr) => {
+      return prev + (curr?.originalPrice - curr?.finalPrice);
+    }, 0)
+    .toFixed(2);
 
   return (
     <section className="bg-bgColor">

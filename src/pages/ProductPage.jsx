@@ -1,14 +1,14 @@
 import { useParams } from "react-router-dom";
-import Pictures from "./Pictures";
-import Details from "./Details";
-import Footer from "../../ui/common/Footer";
-import Advantages from "../Home/Advantages";
-import Filter from "./Filter";
+import Pictures from "../features/Product/Pictures";
+import Details from "../features/Product/Details";
+import Footer from "../ui/common/Footer";
+import Advantages from "../features/Home/Advantages";
+import Filter from "../features/Product/Filter";
 import { useState } from "react";
-import Specifications from "./Specifications";
-import Reviews from "./Reviews";
-import Overview from "./Overview";
-import RelatedProducts from "../../ui/Sliders/RelatedProductsSlider";
+import Specifications from "../features/Product/Specifications";
+import Reviews from "../features/Product/Reviews";
+import Overview from "../features/Product/Overview";
+import RelatedProducts from "../ui/Sliders/RelatedProductsSlider";
 
 function Product() {
   const id = useParams().id;

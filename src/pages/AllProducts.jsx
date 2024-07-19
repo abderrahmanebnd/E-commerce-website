@@ -1,7 +1,7 @@
-import Advantages from "../Home/Advantages";
-import Footer from "../../ui/common/Footer";
-import FilterAside from "./FilterAside";
-import Products from "../../ui/common/Products";
+import Advantages from "../features/Home/Advantages";
+import Footer from "../ui/common/Footer";
+import FilterAside from "../features/all-products/FilterAside";
+import Products from "../ui/common/Products";
 import { useSelector } from "react-redux";
 function AllProducts() {
   const productsList = useSelector((store) => store.filter.filteredProducts);

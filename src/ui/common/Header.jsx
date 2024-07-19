@@ -82,7 +82,7 @@ function Header() {
       <div className="flex items-center container m-auto p-3">
         <h1>
           <NavLink to="/" className="font-bold text-2xl sm:text-3xl">
-            X-SouQ
+            X-Beat
           </NavLink>
         </h1>
         <ul className="ml-auto flex space-x-8 sm:space-x-14 mr-4">

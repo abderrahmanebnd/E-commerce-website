@@ -1,7 +1,7 @@
 import { IoMdStar } from "react-icons/io";
 import Button from "./Button";
 import { useDispatch } from "react-redux";
-import { addItem } from "../../pages/cart/cartSlice";
+import { addItem } from "../../features/cart/cartSlice";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import { addToCart } from "../../helpers";

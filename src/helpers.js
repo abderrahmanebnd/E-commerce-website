@@ -1,5 +1,5 @@
 import toast from "react-hot-toast";
-import { addItem } from "./pages/cart/cartSlice";
+import { addItem } from "./features/cart/cartSlice";
 
 export function addToCart(dispatch, id) {
   dispatch(addItem(id));

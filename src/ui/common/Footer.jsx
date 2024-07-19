@@ -22,7 +22,7 @@ function Footer() {
       <ul className="container m-auto grid gap-7 sm:grid-cols-2 lg:grid-cols-4 px-3 mb-5">
         <li>
           <NavLink to="/" className="text-text text-2xl font-bold block mb-3">
-            X-SouQ
+            X-Beat
           </NavLink>
           <p className="text-text-muted text-sm mb-4">
             Subscribe to our Email alerts to receive early discount offers, and
@@ -63,8 +63,21 @@ function Footer() {
       </ul>
       <div className="bg-black px-4 border-t border-text-muted ">
         <p className="text-text py-4 text-sm sm:text-md">
-          {new Date().getFullYear()} | X-SouQ. All Rights Reserved. Built by |
-          <NavLink className="hover:text-white"> Abderrahmane bnd</NavLink>
+          {new Date().getFullYear()} | X-Beat. All Rights Reserved. Built by |{" "}
+          <NavLink
+            className="hover:text-main underline"
+            to="https://github.com/abderrahmanebnd"
+          >
+            Abderrahmane Bnd
+          </NavLink>{" "}
+          Inspired from
+          <NavLink
+            to="https://x-beat.netlify.app/"
+            className="hover:text-main underline"
+          >
+            {" "}
+            X-Beat
+          </NavLink>
         </p>
       </div>
     </footer>

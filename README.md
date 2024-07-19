@@ -1,8 +1,38 @@
-# React + Vite
+## X-Beat | React eCommerce Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### [Demo Link](https://e-commerce-website-delta-rose.vercel.app/) 🔗
 
-Currently, two official plugins are available:
+Audio Store eCommerce Website, built with **React JS**. <br/>
+State management using Redux Toolkit.
+<br/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features:
+
+- #### Add Product to the Cart
+- #### React Toast notifications when adding a product
+- #### Remove Product from the Cart
+- #### Increment / Decrement the Product's Quantity
+- #### Product's Total Price / Discount Calculations
+- #### Filters - Sort by / Filter by Options
+- #### Fully Responsive
+- #### Dark Theme
+- #### Multi Pages
+- #### ...and much more
+
+<br/>
+
+## Technologies used:
+
+- #### **React JS**
+- #### **React Router**
+- #### **React Swiper**
+- #### **React Toolkit**
+- #### **Tailwind css**
+
+<br/>
+
+## Author:
+
+- **Abderrahmane bnd** - **[Linkedin](https://www.linkedin.com/in/bendaia-abderrahmane-80b3a027b/)**
+
+<br/>
