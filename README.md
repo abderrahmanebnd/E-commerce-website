@@ -14,6 +14,7 @@ State management using Redux Toolkit.
 - #### Increment / Decrement the Product's Quantity
 - #### Product's Total Price / Discount Calculations
 - #### Filters - Sort by / Filter by Options
+- #### Search for Products
 - #### Fully Responsive
 - #### Dark Theme
 - #### Multi Pages
